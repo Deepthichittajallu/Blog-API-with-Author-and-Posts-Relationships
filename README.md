@@ -18,23 +18,20 @@ A backend API that:
 - Postman API(for testing)
 
 ## Project Structure
-blog-api/
-│
+```blog-api/
 ├── server.js
 ├── package.json
-│
 ├── config/
-│   └── db.js
-│
+│ └── db.js
 ├── controllers/
-│   ├── authorController.js
-│   └── postController.js
-│
+│ ├── authorController.js
+│ └── postController.js
 ├── routes/
-│   ├── authorRoutes.js
-│   └── postRoutes.js
-│
+│ ├── authorRoutes.js
+│ └── postRoutes.js
 └── README.md
+```
+
 
 
 ---
@@ -54,6 +51,7 @@ blog-api/
 ```bash
 git clone <YOUR_GITHUB_REPOSITORY_LINK>
 cd Blog-API-with-Author-and-Posts-Relationships
+```
 
 
 ### 3 Install Dependencies : npm install
