@@ -1,23 +1,65 @@
-# Blog API – Authors & Posts
+# Blog-API-with-Author-and-Posts-Relationships
 
-A RESTful API built with Node.js, Express, and MySQL to manage authors and their blog posts.
-This project demonstrates handling one-to-many relationships using foreign keys and Joins.
+A RESTful Blog API built using Node.js, Express.js, and MySQL.
+This project demonstrates how to design and manage a one-to-many relationship between authors and posts, enforce database integrity, and efficiently retrieve related data using SQL JOIN queries.
 
 ## Features
-- Create, read, and delete authors
-- Create, read, and delete posts
-- One-to-many relationship (Author → Posts)
-- Cascade delete: deleting an author deletes their posts
-- Efficient queries using JOIN to avois N+1 problem
+A backend API that:
+- Manages authors and their corresponding blog posts
+- Correctly models a one-to-many relationship
+- Ensures data integrity using foreign keys and cascade deletes
+- Avoids inefficient database access patterns such as the N+1 query problem
 
 ## Tech Stack
 - Node.js
 - Express.js
 - MySQL
 - mysql2
-- dotenv (for environment variable management)
+<!-- <<<<<<< HEAD
+- dotenv (for environment variable management) -->
+
+<!-- ======= -->
+<!-- - Postman API(for testing)
+>>>>>>> 0b7092d3697327a03e53a395e5c4bba69b4ecb89 -->
+
+## Project Structure
+```blog-api/
+├── server.js
+├── package.json
+├── config/
+│ └── db.js
+├── controllers/
+│ ├── authorController.js
+│ └── postController.js
+├── routes/
+│ ├── authorRoutes.js
+│ └── postRoutes.js
+└── README.md
+```
 
 
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1️ Prerequisites
+
+- Node.js (v18 or higher)
+- MySQL Server
+- Git
+
+---
+
+### 2 Clone the Repository
+
+```bash
+git clone <YOUR_GITHUB_REPOSITORY_LINK>
+cd Blog-API-with-Author-and-Posts-Relationships
+```
+
+
+### 3 Install Dependencies : npm install
 ## Database Schema
 - authors(id, name, email)
 - posts(id, title, content, author_id)
