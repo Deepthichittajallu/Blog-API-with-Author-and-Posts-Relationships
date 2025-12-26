@@ -15,6 +15,8 @@ This project demonstrates handling one-to-many relationships using foreign keys 
 - Express.js
 - MySQL
 - mysql2
+- dotenv (for environment variable management)
+
 
 ## Database Schema
 - authors(id, name, email)
@@ -34,13 +36,22 @@ This project demonstrates handling one-to-many relationships using foreign keys 
 - GET /posts
 - GET /posts/:id
 - DELETE /posts/:id
+- GET /authors/:id/posts
 
 ## How to Run
 1. Install dependencies: npm install 
 2. Start Server : npm server.js
 3. Server runs at: http://localhost:3000
 
+### Environment Variables
 
+Create a `.env` file in the project root with the following values:
+
+DB_HOST=localhost  
+DB_USER=root  
+DB_PASSWORD=your_mysql_password  
+DB_NAME=blog_db  
+PORT=3000
 ## Notes
 - Author must exist before creating a post
 - Deleting an author automatically deletes all related posts
