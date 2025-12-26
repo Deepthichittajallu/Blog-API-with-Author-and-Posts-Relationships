@@ -1,10 +1,17 @@
 const express = require("express");
 const router = express.Router();
+const { body } = require("express-validator");
 
 const authorController = require("../controllers/authorController");
 
 // Create author
-router.post("/", authorController.createAuthor);
+router.post(
+  "/",
+  body("name").isLength({ min: 2 }).withMessage("Name must be at least 2 characters"),
+  body("email").isEmail().withMessage("Invalid email format"),
+  authorController.createAuthor
+);
+
 
 // Get all authors
 router.get("/", authorController.getAuthors);

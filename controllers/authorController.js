@@ -1,7 +1,12 @@
 const db = require("../config/db");
-
+const { validationResult } = require("express-validator");
 // Create a new author
 exports.createAuthor = (req, res) => {
+  const errors = validationResult(req);
+if (!errors.isEmpty()) {
+  return res.status(400).json({ errors: errors.array() });
+}
+
   const { name, email } = req.body;
 
   if (!name || !email) {

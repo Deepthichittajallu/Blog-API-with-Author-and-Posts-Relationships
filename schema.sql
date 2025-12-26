@@ -1,0 +1,18 @@
+CREATE DATABASE IF NOT EXISTS blog_db;
+USE blog_db;
+
+CREATE TABLE authors (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(100) NOT NULL,
+  email VARCHAR(100) NOT NULL UNIQUE
+);
+
+CREATE TABLE posts (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(200) NOT NULL,
+  content TEXT NOT NULL,
+  author_id INT,
+  FOREIGN KEY (author_id)
+    REFERENCES authors(id)
+    ON DELETE CASCADE
+);
