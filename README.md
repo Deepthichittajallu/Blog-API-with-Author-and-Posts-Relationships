@@ -55,7 +55,7 @@ A backend API that:
 ### 2 Clone the Repository
 
 ```bash
-git clone <YOUR_GITHUB_REPOSITORY_LINK>
+git clone https://github.com/Deepthichittajallu/Blog-API-with-Author-and-Posts-Relationships
 cd Blog-API-with-Author-and-Posts-Relationships
 ```
 
