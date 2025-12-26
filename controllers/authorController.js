@@ -59,3 +59,17 @@ exports.deleteAuthor = (req, res) => {
     }
   );
 };
+exports.getAuthorPosts = (req, res) => {
+  const authorId = req.params.id;
+
+  db.query(
+    "SELECT * FROM posts WHERE author_id = ?",
+    [authorId],
+    (err, results) => {
+      if (err) {
+        return res.status(500).json({ message: "Database error" });
+      }
+      res.json(results);
+    }
+  );
+};

@@ -14,5 +14,5 @@ router.get("/:id", authorController.getAuthorById);
 
 // Delete author
 router.delete("/:id", authorController.deleteAuthor);
-
+router.get("/:id/posts", authorController.getAuthorPosts);
 module.exports = router;
