@@ -25,6 +25,7 @@ A backend API that:
 ## Project Structure
 ```blog-api/
 ├── server.js
+├── schema.sql
 ├── package.json
 ├── config/
 │ └── db.js
